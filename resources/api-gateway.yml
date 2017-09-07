@@ -1,0 +1,29 @@
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 20000
+
+zuul:
+  ignored-services: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+
+server:
+  port: 4000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:4444/eureka/
+
+spring:
+  resources:
+    static-locations: file:/Users/itachi/Desktop/spring-cloud-financial/front-end/resources/

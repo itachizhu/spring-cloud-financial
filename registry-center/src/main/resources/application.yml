@@ -1,0 +1,9 @@
+endpoints:
+  restart:
+    enabled: true
+  refresh:
+    enabled: true
+  enabled: true
+#management:
+#  security:
+#    enabled: false

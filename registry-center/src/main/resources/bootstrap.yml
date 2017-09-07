@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: registry-center
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+      password: admin123
+      username: user
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/

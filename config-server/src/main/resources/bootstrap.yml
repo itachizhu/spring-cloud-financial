@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: native
+  cloud:
+      config:
+        server:
+          native:
+            search-locations: file:/Users/itachi/Desktop/spring-cloud-financial/resources/
