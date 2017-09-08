@@ -12,9 +12,26 @@ ribbon:
 
 zuul:
   ignored-services: '*'
+  strip-prefix: false
   host:
     connect-timeout-millis: 20000
     socket-timeout-millis: 20000
+  routes:
+    auth-service:
+      path: /uaa/**
+      url: http://localhost:5000
+
+    account-service:
+      path: /accounts/**
+      serviceId: account-service
+
+    statistics-service:
+      path: /statistics/**
+      serviceId: statistics-service
+
+    notification-service:
+      path: /notifications/**
+      serviceId: notification-service
 
 server:
   port: 4000

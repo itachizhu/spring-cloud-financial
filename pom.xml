@@ -10,6 +10,7 @@
         <module>config-server</module>
         <module>api-gateway</module>
         <module>auth-service</module>
+        <module>account-service</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -30,6 +31,8 @@
         <tomcat.version>8.0.38</tomcat.version>
         <jedis.version>2.9.0</jedis.version>
         <zipkin.version>1.31.1</zipkin.version>
+        <spring.security.version>4.2.3.RELEASE</spring.security.version>
+        <spring-security.version>4.2.3.RELEASE</spring-security.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
@@ -357,6 +360,11 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-oauth2</artifactId>
+                <version>1.2.1.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-eureka-server</artifactId>
                 <version>${spring.cloud.version}</version>
             </dependency>
@@ -378,6 +386,11 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+                <version>${spring.cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-netflix-hystrix-stream</artifactId>
                 <version>${spring.cloud.version}</version>
             </dependency>
 
@@ -586,7 +599,7 @@
                 <groupId>de.flapdoodle.embed</groupId>
                 <artifactId>de.flapdoodle.embed.mongo</artifactId>
                 <version>2.0.0</version>
-                <scope>runtime</scope>
+                <scope>test</scope>
             </dependency>
 
             <dependency>
