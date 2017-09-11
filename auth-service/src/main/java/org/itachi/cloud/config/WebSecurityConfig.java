@@ -43,8 +43,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         // @formatter:off
-        String path = "/".equalsIgnoreCase(contextPath.trim()) ? "" : contextPath.trim();
-        http.antMatcher(path + "/**")
+        if (contextPath == null || contextPath.isEmpty() || "/".equalsIgnoreCase(contextPath.trim())) {
+            throw new IllegalArgumentException("server.context-path must be set!!");
+        }
+        http.antMatcher(contextPath.trim() + "/**")
                 .authorizeRequests()
                 .anyRequest()
                 .authenticated()
