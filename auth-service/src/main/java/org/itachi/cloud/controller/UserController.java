@@ -21,6 +21,11 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello World!";
+    }
+
     @GetMapping("/current")
     public Principal getUser(Principal principal) {
         return principal;

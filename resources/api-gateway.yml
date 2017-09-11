@@ -1,11 +1,3 @@
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 20000
-
 ribbon:
   ReadTimeout: 20000
   ConnectTimeout: 20000
@@ -13,33 +5,29 @@ ribbon:
 zuul:
   ignored-services: '*'
   strip-prefix: false
+  sensitive-headers:
   host:
     connect-timeout-millis: 20000
     socket-timeout-millis: 20000
   routes:
     auth-service:
       path: /uaa/**
-      url: http://localhost:5000
+      url: http://localhost:5000/uaa/
 
     account-service:
       path: /accounts/**
       serviceId: account-service
 
-    statistics-service:
-      path: /statistics/**
-      serviceId: statistics-service
+#    statistics-service:
+#      path: /statistics/**
+#      serviceId: statistics-service
 
-    notification-service:
-      path: /notifications/**
-      serviceId: notification-service
+#    notification-service:
+#      path: /notifications/**
+#      serviceId: notification-service
 
 server:
   port: 4000
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:4444/eureka/
 
 spring:
   resources:
