@@ -4,6 +4,9 @@
 https://github.com/sqshq/PiggyMetrics
 我这里使用的是本机开发模式，作者的docker上运行的对初学者比较麻烦，我重新弄一个，顺便升级spring相关组件的版本。
 
+整体架构图：
+![整体架构图](assets/markdown-img-paste-20170911161933135.png)
+
 ## config-server
 首先创建微服务的配置中心项目
 
