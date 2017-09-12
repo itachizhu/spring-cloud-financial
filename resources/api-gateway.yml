@@ -32,3 +32,7 @@ server:
 spring:
   resources:
     static-locations: file:/Users/itachi/Desktop/spring-cloud-financial/front-end/resources/
+
+management:
+  security:
+    enabled: false
