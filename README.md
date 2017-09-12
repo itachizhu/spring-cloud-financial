@@ -8,7 +8,7 @@ https://github.com/sqshq/PiggyMetrics
 ![整体架构图](assets/markdown-img-paste-20170911161933135.png)
 
 ## 前置条件
-首先我们要再本机安装mongodb和rabbitmq，这里我使用的是mac系统，简单两个命令搞定：
+首先我们要在本机安装mongodb和rabbitmq，这里我使用的是mac系统，简单两个命令搞定：
 
 ```
 brew install mongodb
