@@ -10,6 +10,10 @@ public enum Currency {
     USD, EUR, RUB, CNY;
 
     public static Currency getDefault() {
-        return CNY;
+        return USD;
+    }
+
+    public static Currency getBase() {
+        return USD;
     }
 }

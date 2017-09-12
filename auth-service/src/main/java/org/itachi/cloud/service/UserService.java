@@ -1,6 +1,6 @@
 package org.itachi.cloud.service;
 
-import org.itachi.cloud.domain.User;
+import org.itachi.cloud.model.User;
 
 /**
  * Created by itachi on 2017/9/8.

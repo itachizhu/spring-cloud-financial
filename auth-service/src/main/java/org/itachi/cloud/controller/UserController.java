@@ -1,6 +1,6 @@
 package org.itachi.cloud.controller;
 
-import org.itachi.cloud.domain.User;
+import org.itachi.cloud.model.User;
 import org.itachi.cloud.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;

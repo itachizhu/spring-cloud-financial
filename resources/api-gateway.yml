@@ -18,13 +18,13 @@ zuul:
       path: /accounts/**
       serviceId: account-service
 
-#    statistics-service:
-#      path: /statistics/**
-#      serviceId: statistics-service
+    statistics-service:
+      path: /statistics/**
+      serviceId: statistics-service
 
-#    notification-service:
-#      path: /notifications/**
-#      serviceId: notification-service
+    notification-service:
+      path: /notifications/**
+      serviceId: notification-service
 
 server:
   port: 4000

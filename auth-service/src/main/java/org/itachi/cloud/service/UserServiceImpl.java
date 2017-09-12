@@ -1,7 +1,7 @@
 package org.itachi.cloud.service;
 
 import lombok.extern.slf4j.Slf4j;
-import org.itachi.cloud.domain.User;
+import org.itachi.cloud.model.User;
 import org.itachi.cloud.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

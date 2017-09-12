@@ -1,28 +1,25 @@
-package org.itachi.cloud.domain;
+package org.itachi.cloud.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.Collection;
+import java.util.List;
 
 /**
- * Created by itachi on 2017/9/8.
+ * Created by itachi on 2017/9/12.
  * User: itachi
- * Date: 2017/9/8
- * Time: 10:11
+ * Date: 2017/9/12
+ * Time: 08:45
  */
 @Document(collection = "users")
 public class User implements UserDetails {
+
     @Id
     private String username;
-    private String password;
 
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
-    }
+    private String password;
 
     @Override
     public String getPassword() {
@@ -32,6 +29,19 @@ public class User implements UserDetails {
     @Override
     public String getUsername() {
         return username;
+    }
+
+    @Override
+    public List<GrantedAuthority> getAuthorities() {
+        return null;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
@@ -52,13 +62,5 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 }

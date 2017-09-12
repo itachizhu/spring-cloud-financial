@@ -1,7 +1,9 @@
-package org.itachi.cloud.domain;
+package org.itachi.cloud.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.validator.constraints.Length;
+import org.itachi.cloud.domain.Item;
+import org.itachi.cloud.domain.Saving;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 

@@ -1,6 +1,6 @@
 package org.itachi.cloud.service.security;
 
-import org.itachi.cloud.domain.User;
+import org.itachi.cloud.model.User;
 import org.itachi.cloud.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

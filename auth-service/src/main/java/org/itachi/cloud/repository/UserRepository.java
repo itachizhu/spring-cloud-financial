@@ -1,6 +1,6 @@
 package org.itachi.cloud.repository;
 
-import org.itachi.cloud.domain.User;
+import org.itachi.cloud.model.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

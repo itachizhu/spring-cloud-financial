@@ -6,7 +6,7 @@ MONGODB_PASSWORD: user123
 
 logging:
   level:
-    org.springframework.security: INFO
+    org.springframework.security: DEBUG
 
 hystrix:
   command:
@@ -26,4 +26,11 @@ eureka:
 security:
   oauth2:
     resource:
-      user-info-uri: http://localhost:4000/uaa/users/current
+      user-info-uri: http://localhost:5000/uaa/users/current
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
