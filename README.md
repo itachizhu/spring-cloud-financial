@@ -34,6 +34,7 @@ brew install rabbitmq
 
 ## monitoring
 可以把这个监控的弄起来了。这里需要用到rabbitmq这种默认的消息队列，当然也可以改成kafka等其他的。
+http://localhost:8989/turbine/turbine.stream
 
 ## statistics-service
 这里注意要用到外网的货币转换服务，所有请注意联网，否则有些功能有问题的。
@@ -44,6 +45,11 @@ brew install rabbitmq
 
 至此，所有的服务功能示例都已经完成，可能还存在隐含的问题，我后续持续跟进。
 按照图里面所有理念是非常好的。
+测试通过的是account-service(包括)之前的所有服务。
+后面几个还有问题，statistics-service和notification-service还是安全验证等的问题，其他都是小问题。
+现在最大的问题是monitoring；之前我没有用spring-cloud-starter-turbine-stream，只用了spring-cloud-starter-turbine，并且跟dashboard
+是分开使用的，现在集成在一起用，在网上也没找到对应的实例，比较麻烦，作者的原样配置根本不行，这个跟spring的auth2验证一样，那个问题我已经通过
+源码调试和尝试解决了，这个得再看看。有必要还得看源码，暂时还没解决。请知。
 
 注意：
 > 我还是和很多人那样的意见，spring-security-oauth2感觉是里面的一个失败品(或者说至少是未完成品)，巨坑。
