@@ -8,3 +8,13 @@ spring:
       fail-fast: true
       password: admin123
       username: user
+#      discovery:
+#        enabled: true
+#        service-id: config-server
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:4444/eureka/
+
+#server.port=8881
